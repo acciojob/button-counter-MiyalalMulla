@@ -7,7 +7,8 @@ export default function ButtonCounter(){
 		}
 	return(
 		<div>
-			<p onClick={counter}>Button click {num} times</p>
+			<p>Button clicked {num} times</p>
+			<button onClick={counter}>Submit</button>
 		</div>
 	)
 }
