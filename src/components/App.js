@@ -10,7 +10,7 @@ function App() {
       <button id="click" onClick={() => setShowPara(true)}>
         Click Me
       </button>
-
+      
       {/* Conditional rendering of paragraph */}
       {showPara && (
         <p id="para">
