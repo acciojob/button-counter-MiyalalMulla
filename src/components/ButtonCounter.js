@@ -1,14 +1,18 @@
-import { useState } from "react"
+import React, { useState } from "react";
 
-export default function ButtonCounter(){
-	const [num, setNum] = useState(0);
-	function counter(){
-			setNum(num+1)
-		}
-	return(
-		<div>
-			<p>Button clicked {num} times</p>
-			<button onClick={counter}>Submit</button>
-		</div>
-	)
+export default function ButtonCounter() {
+    // Initialize counter state to 0
+    const [count, setCount] = useState(0);
+
+    return (
+        <div>
+            {/* Paragraph showing dynamic counter */}
+            <p>Button clicked {count} times</p>
+
+            {/* Button increments counter */}
+            <button onClick={() => setCount(count + 1)}>
+                Click Me
+            </button>
+        </div>
+    );
 }

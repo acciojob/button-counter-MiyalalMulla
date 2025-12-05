@@ -1,15 +1,25 @@
+import React, { Component, useState } from "react";
+import "./../styles/App.css";
 
-import React from "react";
-import './../styles/App.css';
-import ButtonCounter from "./ButtonCounter";
-
-const App = () => {
+function App() {
+  // state to control paragraph visibility
+  const [showPara, setShowPara] = useState(false);
   return (
-    <div>
-        {/* Do not remove the main div */}
-        <ButtonCounter/>
+    <div id="main">
+      {/* Button with required ID */}
+      <button id="click" onClick={() => setShowPara(true)}>
+        Click Me
+      </button>
+
+      {/* Conditional rendering of paragraph */}
+      {showPara && (
+        <p id="para">
+          Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy.
+        </p>
+      )}
     </div>
-  )
+  );
 }
 
-export default App
+
+export default App;
